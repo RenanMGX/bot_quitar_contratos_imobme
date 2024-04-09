@@ -139,7 +139,7 @@ class Imobme:
 
 
         if len(tbody_contratos.find_elements(By.TAG_NAME, 'tr')) <= 0:
-            raise Exception("contrato não encontrado")
+            raise Exception(f"Não foi possivel encontrar a Unidade '{unidade}' do Bloco '{bloco}' do empreendimento '{empreendimento}' no site do Imobme")
         
         #clicar em quitar
         self._find_element(self.navegador, By.XPATH, '//*[@id="Footer"]/div/input').click()
